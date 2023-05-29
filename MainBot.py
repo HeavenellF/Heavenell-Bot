@@ -39,6 +39,15 @@ intents.reactions = False  # Disable receiving reaction-related events
 
 client = MyClient(intents=intents)  # Initialize the bot client with the configured intents
 
+@client.event
+async def on_ready():
+    print(f'Logged in as {client.user} (ID: {client.user.id})')
+    print('------')
+
+@client.tree.command()
+async def nothing(interaction: discord.Interaction):
+    """DO NOT EXECUTE THIS COMMAND"""
+    await interaction.response.send_message(content=":skull:")
 
 # running the Bot
 client.run(API_Key)
