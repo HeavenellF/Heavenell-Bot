@@ -49,5 +49,8 @@ async def nothing(interaction: discord.Interaction):
     """DO NOT EXECUTE THIS COMMAND"""
     await interaction.response.send_message(content=":skull:")
 
+heaven_group = app_commands.Group(name="heaven", description = "nothing to see here")
+
 # running the Bot
+client.tree.add_command(heaven_group)
 client.run(API_Key)
