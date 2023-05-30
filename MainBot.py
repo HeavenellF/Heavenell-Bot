@@ -49,7 +49,13 @@ async def nothing(interaction: discord.Interaction):
     """DO NOT EXECUTE THIS COMMAND"""
     await interaction.response.send_message(content=":skull:")
 
+# Command Group /heaven ------
 heaven_group = app_commands.Group(name="heaven", description = "nothing to see here")
+
+@heaven_group.command(name="hello", description="the Bot will greets you")
+async def heaven_hello(interaction: discord.Interaction):
+    await interaction.response.send_message(f'Hello, {interaction.user.mention}')
+
 
 # running the Bot
 client.tree.add_command(heaven_group)
