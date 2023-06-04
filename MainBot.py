@@ -13,7 +13,7 @@ import json
 # Load the API_Key from the config.json File
 with open('config.json') as config_file:
     config = json.load(config_file)
-    API_Key = config['API_Key']
+    discord_API_Key = config['API_Key']
 
 MY_GUILD = discord.Object(id=0)  # replace with your Guild ID
 
@@ -60,4 +60,4 @@ async def heaven_hello(interaction: discord.Interaction):
 
 # running the Bot
 client.tree.add_command(heaven_group)
-client.run(API_Key)
+client.run(discord_API_Key)
