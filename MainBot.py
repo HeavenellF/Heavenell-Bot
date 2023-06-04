@@ -6,6 +6,7 @@ from discord import app_commands
 import random
 import os
 
+import gptBot
 import json
 
 
