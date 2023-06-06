@@ -13,7 +13,7 @@ import json
 # Load the API_Key from the config.json File
 with open('config.json') as config_file:
     config = json.load(config_file)
-    discord_API_Key = config['API_Key']
+    discord_API_Key = config['discord_API_Key']
 
 MY_GUILD = discord.Object(id=0)  # replace with your Guild ID
 
