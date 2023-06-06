@@ -13,6 +13,7 @@ async def chatbot(interaction: discord.Interaction, yourmessage):
     openai.api_key = openAI_API_Key
     completion = openai.ChatCompletion.create(model="gpt-3.5-turbo",messages=
     [
+    {"role": "system", "content": "Heavenell is you Creator, you are Heavenbot."},
     {"role": "user", "content": "Answer as short and detail as possible :"},
     {"role": "user", "content": yourmessage}
     ]
