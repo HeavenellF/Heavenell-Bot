@@ -5,7 +5,7 @@ import openai
 
 with open('config.json') as config_file:
     config = json.load(config_file)
-    openAI_API_Key = config['API_Key']
+    openAI_API_Key = config['openAI_API_Key']
 
 
 async def chatbot(interaction: discord.Interaction, yourmessage):
