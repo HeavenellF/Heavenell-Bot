@@ -2,12 +2,16 @@ import discord
 from discord import app_commands
 import requests
 
+import json
+
+with open('config.json') as config_file:
+    config = json.load(config_file)
+    url = config['mc_url']
+
 async def MCserver_online(interaction: discord.Interaction):
     # return total Player online right now
-    json_url = 'url_here'
-
     try:
-        response = requests.get(json_url)
+        response = requests.get(url)
         response.raise_for_status()
 
         json_data = response.json()
