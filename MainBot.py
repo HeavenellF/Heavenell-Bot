@@ -7,6 +7,7 @@ import random
 import os
 
 import gptBot
+import function
 import json
 
 
@@ -59,6 +60,9 @@ async def heaven_hello(interaction: discord.Interaction):
 
 Minecraft_group = app_commands.Group(name="Minecraft", description = "wip")
 
+@Minecraft_group.command(name="online", description="return total Player online")
+async def Minecraft_online(interaction: discord.Interaction):
+    await function.MCserver_online()
 
 
 # running the Bot
