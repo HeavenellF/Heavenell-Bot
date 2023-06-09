@@ -51,11 +51,14 @@ async def nothing(interaction: discord.Interaction):
     await interaction.response.send_message(content=":skull:")
 
 # Command Group /heaven ------
-heaven_group = app_commands.Group(name="heaven", description = "nothing to see here")
+heaven_group = app_commands.Group(name="heaven", description = "wip")
 
 @heaven_group.command(name="hello", description="the Bot will greets you")
 async def heaven_hello(interaction: discord.Interaction):
     await interaction.response.send_message(f'Hello, {interaction.user.mention}')
+
+Minecraft_group = app_commands.Group(name="Minecraft", description = "wip")
+
 
 
 # running the Bot
