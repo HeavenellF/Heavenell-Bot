@@ -24,3 +24,15 @@ async def MCserver_online(interaction: discord.Interaction):
             
     except requests.RequestException as e:
         await interaction.response.send_message("Failed to fetch Dynmap JSON data:", str(e))
+
+async def MCserver_playerlist(interaction: discord.Interaction):
+
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  
+
+        json_data = response.json()
+
+        
+    except requests.RequestException as e:
+        await interaction.response.send_message("Failed to fetch Dynmap JSON data:", str(e))
