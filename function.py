@@ -33,6 +33,15 @@ async def MCserver_playerlist(interaction: discord.Interaction):
 
         json_data = response.json()
 
-        
+        if 'players' in json_data:
+            players = json_data['players']
+            if players:
+                print("Players Online:")
+                for player in players:
+                    print(player['name'])
+            else:
+                print("No players online.")
+        else:
+            print("Player data not found in the JSON.")
     except requests.RequestException as e:
         await interaction.response.send_message("Failed to fetch Dynmap JSON data:", str(e))
